@@ -10,7 +10,14 @@
 
 @implementation HelloWorldViewController
 
-
+// Copies name into label field
+- (void)sayHello:(id)sender {
+	NSString *userName = nameField.text;
+	NSString *helloMessage = [[NSString alloc] initWithFormat:@"Hello %@", userName];
+	helloLabel.text = helloMessage;
+	[helloMessage release];
+	nameField.text = @"";
+}
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.

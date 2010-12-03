@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface HelloWorldViewController : UIViewController {
+	
+	IBOutlet UILabel *helloLabel;
+	IBOutlet UITextField *nameField;
 
 }
+
+- (IBAction) sayHello:(id)sender;
 
 @end
 
