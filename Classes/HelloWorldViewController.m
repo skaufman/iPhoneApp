@@ -76,6 +76,8 @@
 
 
 - (void)dealloc {
+	[helloLabel release];
+	[nameField release];
     [super dealloc];
 }
 
