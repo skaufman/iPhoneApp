@@ -17,7 +17,16 @@
 	helloLabel.text = helloMessage;
 	[helloMessage release];
 	nameField.text = @"";
+	// dismiss the keyboard
+	[nameField resignFirstResponder];
 }
+
+// Dismisses the keyboard with Return
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[textField resignFirstResponder];
+	return YES;
+}
+
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
