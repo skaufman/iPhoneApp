@@ -10,6 +10,8 @@
 
 @implementation HelloWorldViewController
 
+@synthesize helloLabel, nameField;
+
 // Copies name into label field
 - (void)sayHello:(id)sender {
 	NSString *userName = nameField.text;
@@ -78,7 +80,7 @@
 - (void)dealloc {
 	[helloLabel release];
 	[nameField release];
-    [super dealloc];
+	[super dealloc];
 }
 
 @end
